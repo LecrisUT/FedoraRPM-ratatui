@@ -16,6 +16,8 @@ Source:         %{crates_source}
 # * downgrade git2 to 0.19
 # * remove feature for building / statically linking vendored OpenSSL sources
 # * allow unicode-truncate 1.0
+# * bump gix dependency to 0.70
+#   https://github.com/gitui-org/gitui/pull/2492
 Patch:          asyncgit-fix-metadata.diff
 # * Downgrade git2 to 0.19
 # * Reverting https://github.com/gitui-org/gitui/pull/2473

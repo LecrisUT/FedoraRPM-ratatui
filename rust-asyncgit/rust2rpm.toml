@@ -2,7 +2,11 @@
 cargo-toml-patch-comments = [
     "downgrade git2 to 0.19",
     "remove feature for building / statically linking vendored OpenSSL sources",
-    "allow unicode-truncate 1.0"
+    "allow unicode-truncate 1.0",
+    """
+    bump gix dependency to 0.70
+    https://github.com/gitui-org/gitui/pull/2492
+    """,
 ]
 
 [[package.extra-patches]]
