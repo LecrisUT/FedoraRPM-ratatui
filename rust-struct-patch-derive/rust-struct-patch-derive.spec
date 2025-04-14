@@ -12,6 +12,9 @@ Summary:        Library that helps you implement partial updates for your struct
 License:        MIT
 URL:            https://crates.io/crates/struct-patch-derive
 Source:         %{crates_source}
+# Manually created patch for downstream crate metadata changes
+# * Drop pretty_assertions_sorted dependency
+Patch:          struct-patch-derive-fix-metadata.diff
 
 BuildRequires:  cargo-rpm-macros >= 24
 
@@ -85,6 +88,9 @@ use the "status" feature of the "%{crate}" crate.
 %prep
 %autosetup -n %{crate}-%{version} -p1
 %cargo_prep
+# Remove pretty_assertions_sorted usage
+sed -i '/use pretty_assertions_sorted/d' src/patch.rs
+sed -i 's/assert_eq_sorted/assert_eq/' src/patch.rs
 
 %generate_buildrequires
 %cargo_generate_buildrequires

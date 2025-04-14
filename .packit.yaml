@@ -75,7 +75,7 @@ packages:
     specfile_path: rust-struct-patch-derive.spec
     downstream_package_name: rust-struct-patch-derive
     upstream_package_name: struct-patch-derive
-    actions: *actions-rust2rpm
+    actions: *actions-rust2rpm-with-patch
   rust-tui-textarea:
     # Uses ratatui
     paths: [ rust-tui-textarea ]
