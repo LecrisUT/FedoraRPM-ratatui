@@ -16,8 +16,8 @@ _:
 
 packages:
   rust-ratatui:
-    # For atuin
-    # https://bugzilla.redhat.com/show_bug.cgi?id=2320186
+    # Main change
+    # https://src.fedoraproject.org/rpms/rust-ratatui/pull-request/3
     paths: [ rust-ratatui ]
     specfile_path: rust-ratatui.spec
     downstream_package_name: rust-ratatui
@@ -34,4 +34,4 @@ jobs:
   - job: copr_build
     trigger: commit
     owner: lecris
-    project: atuin
+    project: ratatui
