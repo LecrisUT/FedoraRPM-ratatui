@@ -46,7 +46,7 @@ packages:
     actions: *actions-rust2rpm-with-patch
   rust-notify-debouncer-mini:
     # For gitui
-    # https://src.fedoraproject.org/rpms/rust-notify-debouncer-mini/pull-request/1
+    # https://src.fedoraproject.org/rpms/rust-notify-debouncer-mini/pull-request/2
     paths: [ rust-notify-debouncer-mini ]
     specfile_path: rust-notify-debouncer-mini.spec
     downstream_package_name: rust-notify-debouncer-mini
