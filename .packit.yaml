@@ -15,6 +15,14 @@ _:
       - sh -c 'rust2rpm -r @${PACKIT_PROJECT_VERSION}'
 
 packages:
+  rust-asyncgit:
+    # For gitui
+    # https://bugzilla.redhat.com/show_bug.cgi?id=2337480
+    paths: [ rust-asyncgit ]
+    specfile_path: rust-asyncgit.spec
+    downstream_package_name: rust-asyncgit
+    upstream_package_name: asyncgit
+    actions: *actions-rust2rpm-with-patch
   rust-desed:
     # Uses ratatui
     paths: [ rust-desed ]
@@ -36,6 +44,14 @@ packages:
     downstream_package_name: rust-gitui
     upstream_package_name: gitui
     actions: *actions-rust2rpm-with-patch
+  rust-notify-debouncer-mini:
+    # For gitui
+    # https://src.fedoraproject.org/rpms/rust-notify-debouncer-mini/pull-request/1
+    paths: [ rust-notify-debouncer-mini ]
+    specfile_path: rust-notify-debouncer-mini.spec
+    downstream_package_name: rust-notify-debouncer-mini
+    upstream_package_name: notify-debouncer-mini
+    actions: *actions-rust2rpm-with-patch
   rust-ratatui:
     # Main change
     # https://src.fedoraproject.org/rpms/rust-ratatui/pull-request/3
@@ -44,6 +60,22 @@ packages:
     downstream_package_name: rust-ratatui
     upstream_package_name: ratatui
     actions: *actions-rust2rpm-with-patch
+  rust-struct-patch:
+    # For gitui
+    # https://bugzilla.redhat.com/show_bug.cgi?id=2300478
+    paths: [ rust-struct-patch ]
+    specfile_path: rust-struct-patch.spec
+    downstream_package_name: rust-struct-patch
+    upstream_package_name: struct-patch
+    actions: *actions-rust2rpm
+  rust-struct-patch-derive:
+    # For struct-patch
+    # https://bugzilla.redhat.com/show_bug.cgi?id=2300476
+    paths: [ rust-struct-patch-derive ]
+    specfile_path: rust-struct-patch-derive.spec
+    downstream_package_name: rust-struct-patch-derive
+    upstream_package_name: struct-patch-derive
+    actions: *actions-rust2rpm
   rust-tui-textarea:
     # Uses ratatui
     paths: [ rust-tui-textarea ]

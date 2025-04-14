@@ -1,0 +1,16 @@
+--- a/src/lib.rs
++++ b/src/lib.rs
+@@ -129,10 +129,10 @@
+ ///
+ #[cfg(feature = "trace-libgit")]
+ pub fn register_tracing_logging() -> bool {
+-	fn git_trace(level: git2::TraceLevel, msg: &[u8]) {
+-		log::info!("[{:?}]: {}", level, String::from_utf8_lossy(msg));
++	fn git_trace(level: git2::TraceLevel, msg: &str) {
++		log::info!("[{:?}]: {}", level, msg);
+ 	}
+-	git2::trace_set(git2::TraceLevel::Trace, git_trace).is_ok()
++	git2::trace_set(git2::TraceLevel::Trace, git_trace)
+ }
+ 
+ ///

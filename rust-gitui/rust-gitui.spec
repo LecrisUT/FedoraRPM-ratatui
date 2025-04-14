@@ -16,6 +16,7 @@ Source:         %{crates_source}
 # * relax parking_lot_core dependency from =0.9.10 to ^0.9.10
 # * update ron (to 0.9):
 #   https://github.com/gitui-org/gitui/commit/5755c096b42553de98490cf788dff1a4925bc574
+# * allow unicode-truncate 1.0
 Patch:          gitui-fix-metadata.diff
 
 BuildRequires:  cargo-rpm-macros >= 24
@@ -28,30 +29,8 @@ Blazing fast terminal-ui for git.}
 
 %package     -n %{crate}
 Summary:        %{summary}
-# (MIT OR Apache-2.0) AND Apache-2.0 AND BSD-2-Clause AND BSD-2-Clause-Views AND BSD-3-Clause AND MIT AND Unlicense AND WTFPL
-# (MIT OR Apache-2.0) AND BSD-3-Clause AND GPL-2.0-only WITH GCC-exception-2.0 AND MIT
-# (MIT OR Apache-2.0) AND Unicode-DFS-2016
-# 0BSD OR MIT OR Apache-2.0
-# Apache-2.0
-# Apache-2.0 OR BSL-1.0
-# Apache-2.0 OR MIT
-# Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT
-# BSD-2-Clause
-# BSD-2-Clause OR Apache-2.0 OR MIT
-# BSD-3-Clause
-# CC0-1.0
-# ISC
-# MIT
-# MIT AND (MIT OR Apache-2.0)
-# MIT OR Apache-2.0
-# MIT OR Apache-2.0 OR Zlib
-# MIT OR GPL-3.0-or-later
-# MIT OR Zlib OR Apache-2.0
-# MPL-2.0
-# Unlicense OR MIT
-# Zlib
-# Zlib OR Apache-2.0 OR MIT
-License:        MIT AND Apache-2.0 AND BSD-2-Clause AND BSD-2-Clause-Views AND BSD-3-Clause AND CC0-1.0 AND GPL-2.0-only WITH GCC-exception-2.0 AND ISC AND MPL-2.0 AND Unicode-DFS-2016 AND Unlicense AND WTFPL AND Zlib AND (0BSD OR MIT OR Apache-2.0) AND (Apache-2.0 OR BSL-1.0) AND (Apache-2.0 OR MIT) AND (Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT) AND (BSD-2-Clause OR Apache-2.0 OR MIT) AND (MIT OR Apache-2.0 OR Zlib) AND (MIT OR GPL-3.0-or-later) AND (Unlicense OR MIT)
+# FIXME: paste output of %%cargo_license_summary here
+License:        # FIXME
 # LICENSE.dependencies contains a full license breakdown
 
 %description -n %{crate} %{_description}

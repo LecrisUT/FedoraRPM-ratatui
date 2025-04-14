@@ -1,0 +1,22 @@
+[package]
+cargo-toml-patch-comments = [
+    "downgrade git2 to 0.19",
+    "remove feature for building / statically linking vendored OpenSSL sources",
+    "allow unicode-truncate 1.0"
+]
+
+[[package.extra-patches]]
+comments = [
+    "Downgrade git2 to 0.19",
+    "Reverting https://github.com/gitui-org/gitui/pull/2473",
+]
+file = "revert_2473.patch"
+number = 10
+
+[requires]
+test = ["/usr/bin/git"]
+
+[tests]
+skip = ["sync::submodules::tests::test_smoke"]
+comments = ["skip tests which require internet connectivity"]
+

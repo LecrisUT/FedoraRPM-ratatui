@@ -1,0 +1,4 @@
+[package]
+cargo-toml-patch-comments = [
+    "Remove macos specific dependencies",
+]
