@@ -1,0 +1,8 @@
+[features]
+enable-all = true
+
+[package]
+cargo-toml-patch-comments = [
+    "drop features and dependencies for unused termwiz support",
+    "drop features and dependencies for unused tui support",
+]

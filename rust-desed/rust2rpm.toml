@@ -1,0 +1,16 @@
+[package]
+cargo-toml-patch-comments = [
+    """\
+    Update inotify dependency from 0.10.0 to 0.11.0: \
+    https://github.com/SoptikHa2/desed/pull/35\
+    """,
+    """\
+    Bump ratatui dependency to 0.29 \
+    https://github.com/SoptikHa2/desed/pull/36\
+    """,
+]
+[requires]
+bin = [
+    "sed >= 4.6",
+]
+

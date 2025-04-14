@@ -1,0 +1,13 @@
+diff --git a/src/selection_view.rs b/src/selection_view.rs
+index d766fa6..34410dc 100644
+--- a/src/selection_view.rs
++++ b/src/selection_view.rs
+@@ -109,7 +109,7 @@ impl Widget for &mut FilteredView<'_, '_> {
+                 }),
+         )
+         .style(Style::default().fg(self.colors.unselected))
+-        .highlight_style(
++        .row_highlight_style(
+             Style::default()
+                 .add_modifier(Modifier::BOLD)
+                 .fg(self.colors.selected),

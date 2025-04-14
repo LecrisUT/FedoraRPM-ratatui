@@ -1,0 +1,15 @@
+[package]
+cargo-toml-patch-comments = [
+    """
+    Update ratatui to 0.29
+    https://github.com/zeenix/gimoji/pull/180
+    """,
+]
+
+[[package.extra-patches]]
+comments = [
+    "Update ratatui to 0.29",
+    "Cherry-picked from https://github.com/zeenix/gimoji/pull/180",
+]
+file = "180.patch"
+number = 10
