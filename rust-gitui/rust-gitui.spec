@@ -17,6 +17,8 @@ Source:         %{crates_source}
 # * update ron (to 0.9):
 #   https://github.com/gitui-org/gitui/commit/5755c096b42553de98490cf788dff1a4925bc574
 # * allow unicode-truncate 1.0
+# * bump struct-patch to 0.9
+#   https://github.com/gitui-org/gitui/pull/2583
 Patch:          gitui-fix-metadata.diff
 
 BuildRequires:  cargo-rpm-macros >= 24

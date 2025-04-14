@@ -3,7 +3,11 @@ cargo-toml-patch-comments = [
     "remove feature for building / statically linking vendored OpenSSL sources",
     "relax parking_lot_core dependency from =0.9.10 to ^0.9.10",
     "update ron (to 0.9): https://github.com/gitui-org/gitui/commit/5755c096b42553de98490cf788dff1a4925bc574",
-    "allow unicode-truncate 1.0"
+    "allow unicode-truncate 1.0",
+    """
+    bump struct-patch to 0.9
+    https://github.com/gitui-org/gitui/pull/2583
+    """,
 ]
 license-files.exclude = [
     "wix/License.rtf",
