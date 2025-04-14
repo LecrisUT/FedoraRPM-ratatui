@@ -3,6 +3,7 @@ hide = ["termwiz"]
 
 [package]
 cargo-toml-patch-comments = [
+    "temporarily downgrade palette dependency from 0.7.6 to 0.7.5",
     """
     Drop unused dependency font8x8.
     https://github.com/ratatui/ratatui/pull/1777

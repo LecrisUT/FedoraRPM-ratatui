@@ -13,6 +13,7 @@ License:        MIT
 URL:            https://crates.io/crates/ratatui
 Source:         %{crates_source}
 # Manually created patch for downstream crate metadata changes
+# * temporarily downgrade palette dependency from 0.7.6 to 0.7.5
 # * Drop unused dependency font8x8.
 #   https://github.com/ratatui/ratatui/pull/1777
 # * Do not depend on criterion; it is needed only for benchmarks.
