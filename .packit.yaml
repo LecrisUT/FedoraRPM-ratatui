@@ -50,7 +50,7 @@ packages:
     specfile_path: rust-tui-textarea.spec
     downstream_package_name: rust-tui-textarea
     upstream_package_name: tui-textarea
-    actions: *actions-rust2rpm
+    actions: *actions-rust2rpm-with-patch
 
 srpm_build_deps:
   - rust2rpm
